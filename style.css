@@ -1,0 +1,148 @@
+/* Reseteo básico y fuente general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f172a; /* Fondo oscuro moderno (Slate 900) */
+    padding: 20px; /* Margen para pantallas móviles */
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+    background-color: #1e293b; /* Color de panel oscuro (Slate 800) */
+    padding: 45px 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 420px; /* Ancho máximo, se encoge en pantallas pequeñas */
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #f8fafc; /* Texto casi blanco */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    letter-spacing: 1.5px;
+}
+
+/* Grupo de input (contenedor del icono y el texto) */
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #334155; /* Fondo del input oscuro (Slate 700) */
+    border: 2px solid #475569; /* Borde sutil */
+    border-radius: 50px; /* Forma de píldora */
+    margin-bottom: 20px;
+    padding: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al hacer foco en un input */
+.input-group:focus-within {
+    border-color: #38bdf8; /* Borde azul cyan al seleccionar */
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Contenedor circular del icono */
+.icon-container {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6); /* Gradiente azul vibrante */
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%; /* Hacerlo círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 2px;
+    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+}
+
+.icon-container i {
+    font-size: 16px;
+}
+
+/* Estilos de los inputs de texto */
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #f1f5f9; /* Texto claro al escribir */
+    width: 100%;
+    font-weight: 500;
+}
+
+/* Estilos para el texto de relleno (placeholder) */
+input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* Sección de Términos y Condiciones */
+.terms {
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.terms a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.terms a:hover {
+    color: #38bdf8;
+}
+
+/* Botón de Enviar */
+.submit-btn {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6); /* Mismo gradiente que los iconos */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Efectos al pasar el cursor y al hacer clic en el botón */
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(14, 165, 233, 0.5);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(14, 165, 233, 0.3);
+}
+
+/* Hacerlo 100% responsivo para móviles pequeños */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 35px 20px; /* Reduce un poco el espaciado interior en teléfonos */
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+}
